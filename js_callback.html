@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            call back 
+        </title>
+    </head>
+    <body>
+        <p id="demo">call back function</p>
+        <button id="mybutton">click Me</button>
+<script>
+    function handleclick()
+    {
+        alert("button is clicked!");
+    }
+    const button = document.getElementById("mybutton");
+    button.addEventListener("click",handleclick());
+</script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>
+        handle events
+      </title>
+   </head>
+   <body>
+    <fieldset>
+    <button id="button">click Me</button><br><br>
+    
+        <label>Name:</label><br>
+        <input type="text" id="name" placeholder="enter your name...."/><br><br>
+        
+        <div id="mouseArea" style="background-color:lightblue; width:300px; height:300px";>
+
+        </div> <br><br> 
+
+        <form id="myform">
+        <input type="submit" value="submit">
+        </form>
+    </fieldset>
+     
+    <script>
+        document.getElementById("button").addEventListener('click',function(){
+            alert("Button is Clicked!");
+        });
+        
+        document.getElementById("name").addEventListener("keypress",function(event){
+            alert("key pressed:" + event.key);
+        });
+
+        document.getElementById("mouseArea").addEventListener("mouseout",function(event){
+            alert("it is working");
+        });
+
+        document.getElementById('myform').addEventListener("submit",function(event){
+            event.preventDefault();
+            alert("Form Submitted!");
+        });
+    </script>
+   </body>
+</html>

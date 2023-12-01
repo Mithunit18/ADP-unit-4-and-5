@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script>
+            function task()
+            {
+                const car=document.getElementById('demo');
+                document.getElementById('demo').style.background="lightblue";
+                document.getElementById('demo').innerHTML=car.innerHTML+" is the FULLSTACK developer";
+
+                const element=document.getElementsByTagName("p");
+
+                document.getElementById("intro").style.color="green";
+                document.getElementById('intro').innerHTML=element[1].innerHTML+"  is my BROTHER";
+
+                document.getElementById("trim").style.background="pink";
+                document.getElementById('trim').innerHTML=element[2].innerHTML+" is my FATHER";
+
+                document.getElementById("shoot").style.color="orange";
+                document.getElementById("shoot").innerHTML=element[3].innerHTML+" is my MOTHER";
+
+
+            }
+        </script>
+    </head>
+    <body>
+          <center>
+        <fieldset>
+        <p id="demo">Mithun</p>
+        <p id="intro">Roshan</p>
+        <p id="trim">Murugan</p>
+        <p id="shoot">Thenmozhi</p>
+         
+        <button onclick="task()">click Me</button>
+        
+        </fieldset>
+          </center>
+    
+    
+    </body>
+</html>

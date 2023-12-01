@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            setTimeout
+        </title>
+    </head>
+    <body bgcolor="silver">
+        <h1 id="displayText">Initial text</h1>
+        <p>this text will change for every 3 seconds</p>
+
+        <script>
+            const textArray=["first text","second text","third text","fourth text"];
+            let index=0;
+
+            function changeText()
+            {
+              const displayElement=document.getElementById("displayText");
+                      if(displayElement)
+                      {
+                        displayElement.textContent=textArray[index];
+                        index=(index+1)%textArray.length;
+
+                        setTimeout(changeText,3000);
+                      }
+            }
+
+            setTimeout(changeText,3000);
+        </script>
+    </body>
+</html>
